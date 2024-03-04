@@ -1,11 +1,9 @@
 local lsp = require('lsp-zero')
 
 local on_attach = function(client, bufnr)
-    local opts = { noremap = true, silent = true }
-
-    vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, opts)
-    vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, opts)
-    vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover)
+    vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition)
+    vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references)
 
     local organize_imports = function(timeout_ms)
         local params = vim.lsp.util.make_range_params()
