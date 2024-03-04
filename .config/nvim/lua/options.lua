@@ -10,5 +10,6 @@ vim.opt.incsearch = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
 vim.opt.scrolloff = 10
+vim.opt.splitbelow = true
 
 vim.g.mapleader = ' '
