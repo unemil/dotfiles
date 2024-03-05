@@ -26,6 +26,13 @@ return require('packer').startup(function(use)
     }
 
     use {
+        'nvim-tree/nvim-tree.lua',
+        config = function()
+            require('plugins.tree')
+        end
+    }
+
+    use {
         'nvim-telescope/telescope.nvim',
         config = function()
             require('plugins.telescope')
