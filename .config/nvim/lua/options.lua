@@ -10,6 +10,7 @@ vim.opt.incsearch = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
 vim.opt.scrolloff = 10
+vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.showmode = false
 
