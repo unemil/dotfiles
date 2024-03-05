@@ -19,6 +19,13 @@ return require('packer').startup(function(use)
     }
 
     use {
+        'nvim-lualine/lualine.nvim',
+        config = function()
+            require('plugins.lualine')
+        end
+    }
+
+    use {
         'nvim-telescope/telescope.nvim',
         config = function()
             require('plugins.telescope')

@@ -1,7 +1,11 @@
 vim.keymap.set('n', '<leader>tn', ':tabnew<CR>')
-vim.keymap.set('n', '<leader>tt', ':tabn<CR>')
+vim.keymap.set('n', '<Tab>', ':tabn<CR>')
+vim.keymap.set('n', '<S-Tab>', ':tabp<CR>')
 vim.keymap.set('n', '<leader>tc', ':tabclose<CR>')
 
 vim.keymap.set('n', '<leader>wn', '<C-w>n')
-vim.keymap.set('n', '<leader>ww', '<C-w>w')
+vim.keymap.set('n', '<leader>h', '<C-w>h')
+vim.keymap.set('n', '<leader>j', '<C-w>j')
+vim.keymap.set('n', '<leader>k', '<C-w>k')
+vim.keymap.set('n', '<leader>l', '<C-w>l')
 vim.keymap.set('n', '<leader>wc', '<C-w>c')

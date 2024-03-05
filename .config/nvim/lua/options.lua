@@ -1,4 +1,4 @@
-vim.opt.nu = true
+vim.opt.number = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -11,5 +11,6 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
 vim.opt.scrolloff = 10
 vim.opt.splitbelow = true
+vim.opt.showmode = false
 
 vim.g.mapleader = ' '
