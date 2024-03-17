@@ -1,18 +1,18 @@
 [core]
-    editor = 'nvim'
+	editor = "code --wait"
 [alias]
-    a = add
-    b = branch
-    d = diff
-    s = status
-    f = fetch
-    i = init
-    l = log
-    h = log --date=iso-local --pretty=format:'%h - [%ad, %an] %s%d' --abbrev-commit
-    c = commit
-    co = checkout
-    ph = push
-    pl = pull
-    rv = revert
-    re = restore
-    rs = reset
+	a = add
+	b = branch
+	d = diff
+	s = status
+	f = fetch
+	i = init
+	l = log
+	h = log --date=iso-local --pretty=format:'%h - [%ad, %an] %s%d' --abbrev-commit
+	c = commit
+	co = checkout
+	ph = push
+	pl = pull
+	rv = revert
+	re = restore
+	rs = reset
