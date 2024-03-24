@@ -50,6 +50,7 @@
 	"window.title": "${rootName}",
 	"editor.scrollbar.horizontal": "hidden",
 	"editor.scrollbar.vertical": "hidden",
+	"editor.scrollbar.verticalScrollbarSize": 8,
 	"editor.scrollbar.ignoreHorizontalScrollbarInContentHeight": true,
 	"redhat.telemetry.enabled": false,
 	"explorer.confirmDragAndDrop": false,
@@ -73,7 +74,6 @@
 	"terminal.integrated.enablePersistentSessions": false,
 	"terminal.integrated.environmentChangesRelaunch": false,
 	"terminal.integrated.tabs.enableAnimation": false,
-	"editor.detectIndentation": false,
 	"terminal.integrated.tabs.title": "",
 	"workbench.editor.showTabs": "single",
 	"workbench.editor.enablePreview": false,
@@ -87,7 +87,8 @@
 	"workbench.editor.labelFormat": "medium",
 	"workbench.activityBar.location": "hidden",
 	"explorer.compactFolders": true,
-	"workbench.colorTheme": "vscode-theme",
+	"workbench.colorTheme": "vs-dark-theme",
+	"editor.wordWrap": "on",
 	"apc.stylesheet": {
 		".title-label h2": "display: none"
 	}
