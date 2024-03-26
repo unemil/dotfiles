@@ -9,12 +9,18 @@ DISABLE_MAGIC_FUNCTIONS=true
 plugins=(
 	git
 	zsh-autosuggestions
+	aliases
+	web-search
+	vscode
+	golang
+	docker
+	kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
 
-alias ll='ls -lah'
-alias vim='nvim'
+alias ll="ls -lah"
+alias vim="nvim"
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
