@@ -1,4 +1,17 @@
-PS1="%n %1~ $ "
+export ZSH=$HOME/.oh-my-zsh
+
+PROMPT="%1~ $ "
+DISABLE_LS_COLORS=true
+DISABLE_AUTO_TITLE=true
+DISABLE_UNTRACKED_FILES_DIRTY=true
+DISABLE_MAGIC_FUNCTIONS=true
+
+plugins=(
+	git
+	zsh-autosuggestions
+)
+
+source $ZSH/oh-my-zsh.sh
 
 alias ll='ls -lah'
 alias vim='nvim'
