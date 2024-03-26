@@ -87,6 +87,7 @@
 	"explorer.compactFolders": true,
 	"workbench.colorTheme": "vs-dark-theme",
 	"editor.wordWrap": "on",
+	"editor.cursorBlinking": "solid",
 	"apc.stylesheet": {
 		".title-label h2": "display: none"
 	}
