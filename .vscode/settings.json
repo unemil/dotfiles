@@ -49,8 +49,6 @@
 	"workbench.editor.untitled.labelFormat": "name",
 	"window.title": "${rootName}",
 	"editor.scrollbar.horizontal": "hidden",
-	"editor.scrollbar.vertical": "hidden",
-	"editor.scrollbar.verticalScrollbarSize": 8,
 	"editor.scrollbar.ignoreHorizontalScrollbarInContentHeight": true,
 	"redhat.telemetry.enabled": false,
 	"explorer.confirmDragAndDrop": false,
