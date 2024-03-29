@@ -85,7 +85,7 @@
 	"workbench.editor.labelFormat": "medium",
 	"workbench.activityBar.location": "hidden",
 	"explorer.compactFolders": true,
-	"workbench.colorTheme": "vs-dark-theme",
+	"workbench.colorTheme": "vsc-theme",
 	"editor.wordWrap": "on",
 	"editor.cursorBlinking": "solid",
 	"apc.stylesheet": {
