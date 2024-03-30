@@ -62,7 +62,6 @@
 	"extensions.ignoreRecommendations": true,
 	"accessibility.verbosity.terminal": false,
 	"terminal.integrated.customGlyphs": false,
-	"terminal.integrated.defaultLocation": "editor",
 	"terminal.integrated.shellIntegration.decorationsEnabled": "never",
 	"editor.minimap.enabled": false,
 	"terminal.integrated.hideOnStartup": "always",
