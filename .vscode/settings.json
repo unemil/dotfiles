@@ -82,7 +82,6 @@
 	"workbench.tree.enableStickyScroll": false,
 	"security.promptForLocalFileProtocolHandling": false,
 	"workbench.editor.labelFormat": "medium",
-	"workbench.activityBar.location": "hidden",
 	"explorer.compactFolders": true,
 	"workbench.colorTheme": "vsc-theme",
 	"editor.wordWrap": "on",
