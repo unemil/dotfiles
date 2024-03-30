@@ -3,5 +3,9 @@
 		"key": "alt+space",
 		"command": "editor.action.triggerSuggest",
 		"when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+	},
+	{
+		"key": "cmd+m",
+		"command": "workbench.action.toggleActivityBarVisibility"
 	}
 ]
