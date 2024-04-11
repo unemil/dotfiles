@@ -419,15 +419,15 @@
 		"terminal.ansiBrightBlue": "#9898a6",
 		"terminal.ansiBrightCyan": "#9898a6",
 		"terminal.ansiBrightGreen": "#d3daf3",
-		"terminal.ansiBrightMagenta": "#e2e4ed",
+		"terminal.ansiBrightMagenta": "#9898a6",
 		"terminal.ansiBrightRed": "#e8d6eb",
-		"terminal.ansiBrightWhite": "#9898a6",
+		"terminal.ansiBrightWhite": "#e2e4ed",
 		"terminal.ansiBrightYellow": "#9898a6",
 		"terminal.ansiCyan": "#9898a6",
 		"terminal.ansiGreen": "#d3daf3",
-		"terminal.ansiMagenta": "#e2e4ed",
+		"terminal.ansiMagenta": "#9898a6",
 		"terminal.ansiRed": "#e8d6eb",
-		"terminal.ansiWhite": "#9898a6",
+		"terminal.ansiWhite": "#e2e4ed",
 		"terminal.ansiYellow": "#9898a6",
 		"terminal.dropBackground": "#817c9c26",
 		"terminal.foreground": "#9898a6",
@@ -482,8 +482,7 @@
 				"constant.character.escape"
 			],
 			"settings": {
-				"foreground": "#9898a6",
-				"fontStyle": "bold"
+				"foreground": "#9898a6"
 			}
 		},
 		{
@@ -584,17 +583,7 @@
 				"punctuation.definition.tag"
 			],
 			"settings": {
-				"foreground": "#9898a6",
-				"fontStyle": "bold"
-			}
-		},
-		{
-			"scope": [
-				"support.type.property-name.json"
-			],
-			"settings": {
-				"foreground": "#9898a6",
-				"fontStyle": "none"
+				"foreground": "#e2e4ed"
 			}
 		},
 		{
