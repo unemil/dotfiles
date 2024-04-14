@@ -1,6 +1,19 @@
+local actions = require('telescope.actions')
+
 require('telescope').setup({
     defaults = {
-        layout_strategy = 'vertical'
+        layout_strategy = 'vertical',
+        mappings = {
+            i = {
+                ['<Esc>'] = actions.close,
+                ['<Tab>'] = actions.move_selection_next,
+                ['<S-Tab>'] = actions.move_selection_previous,
+            },
+            n = {
+                ['<Tab>'] = actions.move_selection_next,
+                ['<S-Tab>'] = actions.move_selection_previous,
+            }
+        }
     },
     pickers = {
         find_files = {
