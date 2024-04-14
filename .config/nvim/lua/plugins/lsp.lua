@@ -1,107 +1,60 @@
-local lsp = require('lsp-zero')
+local lsp_zero = require('lsp-zero')
 
-local on_attach = function(client, bufnr)
-    vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover)
-    vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition)
-    vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references)
+lsp_zero.on_attach(function(_, bufnr)
+    local builtin = require('telescope.builtin')
+    local opts = { buffer = bufnr }
+    vim.keymap.set('n', 'gd', builtin.lsp_definitions, opts)
+    vim.keymap.set('n', 'gr', builtin.lsp_references, opts)
+    vim.keymap.set('n', 'gI', builtin.lsp_implementations, opts)
+    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+    vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
 
-    local organize_imports = function(timeout_ms)
-        local params = vim.lsp.util.make_range_params()
-
-        params.context = {
-            only = { 'source.organizeImports' }
-        }
-
-        local results = vim.lsp.buf_request_sync(0, 'textDocument/codeAction', params, timeout_ms)
-
-        for _, result in pairs(results or {}) do
-            for _, r in pairs(result.result or {}) do
-                if r.edit then
-                    vim.lsp.util.apply_workspace_edit(r.edit, 'utf-8')
-                else
-                    vim.lsp.buf.execute_command(r.command)
-                end
-            end
-        end
-    end
-
-    local lsp_format = vim.api.nvim_create_augroup('lsp_format', { clear = true })
-
-    vim.api.nvim_create_autocmd('BufWritePre', {
-        group = lsp_format,
-        pattern = '*',
-        callback = function()
-            vim.lsp.buf.format()
-        end
-    })
-    vim.api.nvim_create_autocmd('BufWritePre', {
-        group = lsp_format,
-        pattern = '*.go',
-        callback = function()
-            organize_imports(1000)
-        end
-    })
-
-    local lsp_document_highlight = vim.api.nvim_create_augroup('lsp_document_highlight', { clear = true })
-
-    vim.api.nvim_create_autocmd('CursorHold', {
-        group = lsp_document_highlight,
-        pattern = '*',
-        callback = function()
-            vim.lsp.buf.document_highlight()
-        end
-    })
-    vim.api.nvim_create_autocmd('CursorMoved', {
-        group = lsp_document_highlight,
-        pattern = '*',
-        callback = function()
-            vim.lsp.buf.clear_references()
-        end
-    })
-end
-
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+    lsp_zero.buffer_autoformat()
+end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = { 'gopls', 'pylsp', 'bashls', 'lua_ls' },
+    ensure_installed = {},
     handlers = {
-        lsp.default_setup
+        function(server_name)
+            require('lspconfig')[server_name].setup({})
+        end,
+
+        gopls = function()
+            require('lspconfig').gopls.setup({
+                settings = {
+                    analyses = {
+                        unusedparams = true,
+                    },
+                    staticcheck = true,
+                    gopls = {
+                        gofumpt = true
+                    }
+                }
+            })
+        end
     }
-})
-
-local lspconfig = require('lspconfig')
-
-lspconfig.gopls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = {
-        gopls = {
-            gofumpt = true
-        }
-    }
-})
-
-lspconfig.pylsp.setup({
-    on_attach = on_attach,
-    capabilities = capabilities
-})
-
-lspconfig.bashls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities
-})
-
-lspconfig.lua_ls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities
 })
 
 local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered()
+    },
     mapping = cmp.mapping.preset.insert({
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
-        ['<A-Space>'] = cmp.mapping.complete()
-    })
+        ['<A-Space>'] = cmp.mapping.complete(),
+        ['<Tab>'] = cmp_action.luasnip_supertab(),
+        ['<S-Tab>'] = cmp_action.luasnip_shift_supertab()
+    }),
+    snippet = {
+        expand = function(args)
+            require('luasnip').lsp_expand(args.body)
+        end
+    }
 })

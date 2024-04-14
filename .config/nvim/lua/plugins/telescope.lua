@@ -6,9 +6,21 @@ require('telescope').setup({
         find_files = {
             hidden = true
         }
+    },
+    extensions = {
+        ['ui-select'] = {
+            require('telescope.themes').get_dropdown(),
+        }
     }
 })
 
-vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>')
-vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<CR>')
-vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>')
+pcall(require('telescope').load_extension, 'fzf')
+pcall(require('telescope').load_extension, 'ui-select')
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>sh', builtin.help_tags)
+vim.keymap.set('n', '<leader>sk', builtin.keymaps)
+vim.keymap.set('n', '<leader>sf', builtin.find_files)
+vim.keymap.set('n', '<leader>sg', builtin.live_grep)
+vim.keymap.set('n', '<leader>sd', builtin.diagnostics)
+vim.keymap.set('n', '<leader><leader>', builtin.buffers)

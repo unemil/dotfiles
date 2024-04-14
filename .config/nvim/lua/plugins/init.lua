@@ -13,12 +13,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     'nvim-lua/plenary.nvim',
+    'tpope/vim-sleuth',
     'tpope/vim-commentary',
     'tpope/vim-fugitive',
     {
-        'rose-pine/neovim',
+        'mellow-theme/mellow.nvim',
         config = function()
-            vim.cmd('colorscheme rose-pine')
+            vim.cmd('colorscheme mellow')
         end
     },
     {
@@ -35,12 +36,27 @@ require('lazy').setup({
     },
     {
         'nvim-telescope/telescope.nvim',
+        event = 'VimEnter',
+        branch = '0.1.x',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            {
+                'nvim-telescope/telescope-fzf-native.nvim',
+
+                build = 'make',
+                cond = function()
+                    return vim.fn.executable 'make' == 1
+                end
+            },
+            { 'nvim-telescope/telescope-ui-select.nvim' }
+        },
         config = function()
             require('plugins.telescope')
         end
     },
     {
         'nvim-treesitter/nvim-treesitter',
+        build = ':TSUpdate',
         config = function()
             require('plugins.treesitter')
         end
@@ -53,15 +69,9 @@ require('lazy').setup({
             'williamboman/mason-lspconfig.nvim',
 
             'neovim/nvim-lspconfig',
-
-            'hrsh7th/nvim-cmp',
             'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-nvim-lua',
-            'hrsh7th/cmp-buffer',
-            'hrsh7th/cmp-path',
-            'saadparwaiz1/cmp_luasnip',
-            'L3MON4D3/LuaSnip',
-            'rafamadriz/friendly-snippets'
+            'hrsh7th/nvim-cmp',
+            'L3MON4D3/LuaSnip'
         },
         config = function()
             require('plugins.lsp')
