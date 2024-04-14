@@ -40,6 +40,12 @@ require('lazy').setup({
         end
     },
     {
+        'nvim-treesitter/nvim-treesitter',
+        config = function()
+            require('plugins.treesitter')
+        end
+    },
+    {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         dependencies = {
