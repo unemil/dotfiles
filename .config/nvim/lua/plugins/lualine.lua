@@ -1,4 +1,4 @@
-require('lualine').setup {
+require('lualine').setup({
     options = {
         icons_enabled = false,
         component_separators = { left = '', right = '' },
@@ -21,4 +21,4 @@ require('lualine').setup {
         lualine_y = {},
         lualine_z = {}
     }
-}
+})

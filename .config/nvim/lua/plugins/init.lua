@@ -1,56 +1,48 @@
-vim.cmd [[packadd packer.nvim]]
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+    vim.fn.system({
+        'git',
+        'clone',
+        '--filter=blob:none',
+        'https://github.com/folke/lazy.nvim.git',
+        '--branch=stable',
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
 
-return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
-
-    use 'nvim-lua/plenary.nvim'
-
-    use {
-        'tpope/vim-commentary',
-        'tpope/vim-fugitive'
-    }
-
-    use {
+require('lazy').setup({
+    'nvim-lua/plenary.nvim',
+    'tpope/vim-commentary',
+    'tpope/vim-fugitive',
+    {
         'rose-pine/neovim',
-        as = 'rose-pine',
         config = function()
             vim.cmd('colorscheme rose-pine')
         end
-    }
-
-    use {
+    },
+    {
         'nvim-lualine/lualine.nvim',
         config = function()
             require('plugins.lualine')
         end
-    }
-
-    use {
+    },
+    {
         'nvim-tree/nvim-tree.lua',
         config = function()
             require('plugins.tree')
         end
-    }
-
-    use {
+    },
+    {
         'nvim-telescope/telescope.nvim',
         config = function()
             require('plugins.telescope')
         end
-    }
-
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-        config = function()
-            require('plugins.treesitter')
-        end
-    }
-
-    use {
+    },
+    {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
-        requires = {
+        dependencies = {
             'williamboman/mason.nvim',
             'williamboman/mason-lspconfig.nvim',
 
@@ -68,13 +60,12 @@ return require('packer').startup(function(use)
         config = function()
             require('plugins.lsp')
         end
-    }
-
-    use {
+    },
+    {
         'windwp/nvim-autopairs',
-        requires = { 'hrsh7th/nvim-cmp' },
+        dependencies = { 'hrsh7th/nvim-cmp' },
         config = function()
             require('plugins.autopairs')
         end
     }
-end)
+})
