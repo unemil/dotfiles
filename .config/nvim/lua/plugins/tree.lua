@@ -2,13 +2,19 @@ require('nvim-tree').setup({
     filters = {
         dotfiles = false
     },
+    diagnostics = {
+        enable = true
+    },
     renderer = {
+        highlight_git = 'name',
+        highlight_diagnostics = 'name',
         icons = {
             show = {
                 git = false,
                 file = false,
                 folder = false,
-                folder_arrow = false
+                folder_arrow = false,
+                diagnostics = false
             }
         }
     },

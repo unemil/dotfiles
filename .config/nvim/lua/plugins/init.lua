@@ -15,7 +15,6 @@ require('lazy').setup({
     'nvim-lua/plenary.nvim',
     'tpope/vim-sleuth',
     'tpope/vim-commentary',
-    'tpope/vim-fugitive',
     {
         'mellow-theme/mellow.nvim',
         config = function()
@@ -39,7 +38,6 @@ require('lazy').setup({
         event = 'VimEnter',
         branch = '0.1.x',
         dependencies = {
-            'nvim-lua/plenary.nvim',
             {
                 'nvim-telescope/telescope-fzf-native.nvim',
 
@@ -48,7 +46,7 @@ require('lazy').setup({
                     return vim.fn.executable 'make' == 1
                 end
             },
-            { 'nvim-telescope/telescope-ui-select.nvim' }
+            'nvim-telescope/telescope-ui-select.nvim'
         },
         config = function()
             require('plugins.telescope')
@@ -82,9 +80,14 @@ require('lazy').setup({
     },
     {
         'windwp/nvim-autopairs',
-        dependencies = { 'hrsh7th/nvim-cmp' },
         config = function()
             require('plugins.autopairs')
+        end
+    },
+    {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
         end
     }
 })

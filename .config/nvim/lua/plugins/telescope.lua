@@ -7,11 +7,11 @@ require('telescope').setup({
             i = {
                 ['<Esc>'] = actions.close,
                 ['<Tab>'] = actions.move_selection_next,
-                ['<S-Tab>'] = actions.move_selection_previous,
+                ['<S-Tab>'] = actions.move_selection_previous
             },
             n = {
                 ['<Tab>'] = actions.move_selection_next,
-                ['<S-Tab>'] = actions.move_selection_previous,
+                ['<S-Tab>'] = actions.move_selection_previous
             }
         }
     },
@@ -22,7 +22,7 @@ require('telescope').setup({
     },
     extensions = {
         ['ui-select'] = {
-            require('telescope.themes').get_dropdown(),
+            require('telescope.themes').get_dropdown()
         }
     }
 })
