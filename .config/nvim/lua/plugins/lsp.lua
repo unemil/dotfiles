@@ -40,6 +40,9 @@ require('mason-lspconfig').setup({
 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
+local luasnip = require('luasnip')
+
+require('luasnip.loaders.from_vscode').lazy_load()
 
 cmp.setup({
     window = {
@@ -54,11 +57,12 @@ cmp.setup({
     }),
     snippet = {
         expand = function(args)
-            require('luasnip').lsp_expand(args.body)
+            luasnip.lsp_expand(args.body)
         end
     },
-    sources = {
-        { name = "nvim_lsp" },
-        { name = "nvim_lsp_signature_help" }
-    }
+    sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
+        { name = 'nvim_lsp_signature_help' },
+        { name = 'luasnip' }
+    })
 })
