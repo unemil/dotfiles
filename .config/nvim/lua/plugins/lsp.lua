@@ -50,11 +50,14 @@ cmp.setup({
         documentation = cmp.config.window.bordered()
     },
     mapping = cmp.mapping.preset.insert({
-        ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ['<A-Space>'] = cmp.mapping.complete(),
         ['<Tab>'] = cmp_action.luasnip_supertab(),
         ['<S-Tab>'] = cmp_action.luasnip_shift_supertab()
     }),
+    completion = {
+        completeopt = 'menu,menuone,noinsert'
+    },
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body)
