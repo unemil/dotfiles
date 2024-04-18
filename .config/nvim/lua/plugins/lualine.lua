@@ -3,7 +3,8 @@ require('lualine').setup({
         icons_enabled = false,
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
-        globalstatus = true
+        globalstatus = true,
+        disabled_filetypes = { 'NvimTree' }
     },
     sections = {
         lualine_a = { 'mode' },
