@@ -11,7 +11,6 @@ plugins=(
 	zsh-autosuggestions
 	aliases
 	web-search
-	vscode
 	golang
 	docker
 	kubectl
