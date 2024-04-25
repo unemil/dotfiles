@@ -1,2 +1,2 @@
 [core]
-	editor = "code --wait"
+	editor = "zed --wait"

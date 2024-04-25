@@ -1,13 +1,73 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
 {
   "theme": "Rosé Pine",
-  "ui_font_size": 16,
-  "buffer_font_size": 14
+  "features": {
+    "copilot": false
+  },
+  "buffer_font_features": {
+    "calt": false
+  },
+  "restore_on_startup": "none",
+  "cursor_blink": false,
+  "redact_private_values": true,
+  "show_copilot_suggestions": false,
+  "show_whitespaces": "none",
+  "calls": {
+    "share_on_join": false
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "scrollbar": {
+    "selections": false,
+    "symbols_selections": false
+  },
+  "gutter": {
+    "code_actions": false,
+    "folds": false
+  },
+  "seed_search_query_from_cursor": "selection",
+  "project_panel": {
+    "file_icons": false,
+    "folder_icons": false,
+    "indent_size": 10
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "message_editor": {
+    "auto_replace_emoji_shortcode": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "assistant": {
+    "version": "1",
+    "enabled": false
+  },
+  "show_call_status_icon": false,
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "extend_comment_on_newline": false,
+  "soft_wrap": "editor_width",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "terminal": {
+    "blinking": "off",
+    "line_height": "standard"
+  },
+  "task": {
+    "show_status_indicator": false
+  }
 }
