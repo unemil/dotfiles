@@ -6,11 +6,5 @@
       "alt-b": "editor::ToggleGitBlameInline",
       "alt-shift-b": "editor::ToggleGitBlame"
     }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "alt-tab": "workspace::ToggleBottomDock"
-    }
   }
 ]
