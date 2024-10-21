@@ -1,7 +1,7 @@
 {
   "theme": "Rosé Pine",
   "features": {
-    "inline_completion_provider": "none"
+    "inline_completion_provider": "copilot"
   },
   "buffer_font_family": "Menlo",
   "buffer_font_features": {
@@ -31,6 +31,9 @@
     "code_actions": false,
     "folds": false
   },
+  "indent_guides": {
+    "enabled": false
+  },
   "seed_search_query_from_cursor": "selection",
   "project_panel": {
     "file_icons": false,
@@ -51,7 +54,7 @@
     "button": false
   },
   "assistant": {
-    "version": "1",
+    "version": "2",
     "enabled": false
   },
   "show_call_status_icon": false,
@@ -59,8 +62,7 @@
     "show_nav_history_buttons": false
   },
   "preview_tabs": {
-    "enable_preview_from_file_finder": true,
-    "enable_preview_from_code_navigation": true
+    "enabled": false
   },
   "extend_comment_on_newline": false,
   "soft_wrap": "editor_width",
@@ -68,6 +70,7 @@
     "diagnostics": false,
     "metrics": false
   },
+  "auto_update": false,
   "git": {
     "inline_blame": {
       "enabled": false
@@ -81,6 +84,9 @@
     "line_height": "standard"
   },
   "languages": {
+    "CSV": {
+      "show_inline_completions": false
+    },
     "YAML": {
       "format_on_save": "off"
     }
