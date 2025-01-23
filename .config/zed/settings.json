@@ -25,7 +25,10 @@
     "quick_actions": false
   },
   "scrollbar": {
-    "symbols_selections": false
+    "symbols_selections": false,
+    "axes": {
+      "horizontal": false
+    }
   },
   "gutter": {
     "code_actions": false,
