@@ -14,8 +14,6 @@
   "restore_on_startup": "none",
   "cursor_blink": false,
   "current_line_highlight": "none",
-  "redact_private_values": true,
-  "show_copilot_suggestions": false,
   "show_whitespaces": "none",
   "calls": {
     "share_on_join": false
@@ -48,7 +46,7 @@
     "button": false
   },
   "chat_panel": {
-    "button": false
+    "button": "never"
   },
   "message_editor": {
     "auto_replace_emoji_shortcode": false
@@ -57,8 +55,12 @@
     "button": false
   },
   "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "o3-mini"
+    },
     "version": "2",
-    "enabled": false
+    "enabled": true
   },
   "show_call_status_icon": false,
   "tab_bar": {
