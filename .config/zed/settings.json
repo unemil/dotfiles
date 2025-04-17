@@ -1,7 +1,11 @@
 {
+  "edit_predictions": {
+    "mode": "subtle",
+    "enabled_in_assistant": true
+  },
   "theme": "Zed Legacy: Rosé Pine",
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   "buffer_font_family": "Menlo",
   "buffer_font_features": {
@@ -60,8 +64,8 @@
   },
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-thinking-latest"
     },
     "version": "2",
     "enabled": true
