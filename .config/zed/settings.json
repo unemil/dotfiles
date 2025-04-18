@@ -113,5 +113,6 @@
   },
   "task": {
     "show_status_indicator": false
-  }
+  },
+  "proxy": "http://username:password@ip:port"
 }
