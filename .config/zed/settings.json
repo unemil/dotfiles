@@ -1,11 +1,13 @@
 {
   "edit_predictions": {
-    "mode": "eager",
-    "enabled_in_assistant": true
+    "enabled_in_assistant": true,
+    "copilot": {
+      "proxy": "http://username:password@ip:port"
+    }
   },
   "theme": "Zed Legacy: Rosé Pine",
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "buffer_font_family": "Menlo",
   "buffer_font_features": {
