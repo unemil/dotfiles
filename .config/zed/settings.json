@@ -5,7 +5,7 @@
       "proxy": "http://username:password@ip:port"
     }
   },
-  "theme": "Zed Legacy: Rosé Pine",
+  "theme": "Mellow",
   "features": {
     "edit_prediction_provider": "copilot"
   },
@@ -65,12 +65,12 @@
     "button": false
   },
   "assistant": {
+    "version": "2",
+    "enabled": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4"
-    },
-    "version": "2",
-    "enabled": true
+      "model": "gemini-2.5-pro"
+    }
   },
   "show_call_status_icon": false,
   "tab_bar": {
@@ -100,9 +100,11 @@
   },
   "languages": {
     "CSV": {
-      "show_edit_predictions": false
+      "show_edit_predictions": false,
+      "format_on_save": "off"
     },
     "YAML": {
+      "show_edit_predictions": false,
       "format_on_save": "off"
     }
   },
