@@ -1,6 +1,6 @@
 {
   "edit_predictions": {
-    "enabled_in_assistant": true,
+    "enabled_in_text_threads": true,
     "copilot": {
       "proxy": "http://username:password@ip:port"
     }
@@ -9,14 +9,9 @@
   "features": {
     "edit_prediction_provider": "copilot"
   },
-  "buffer_font_family": "Menlo",
   "buffer_font_features": {
     "calt": false
   },
-  "buffer_font_size": 13.0,
-  "ui_font_family": "Menlo",
-  "ui_font_size": 14,
-  "vim_mode": true,
   "restore_on_startup": "none",
   "cursor_blink": false,
   "current_line_highlight": "none",
@@ -36,6 +31,7 @@
     }
   },
   "gutter": {
+    "line_numbers": false,
     "code_actions": false,
     "folds": false
   },
@@ -64,13 +60,18 @@
   "notification_panel": {
     "button": false
   },
-  "assistant": {
+  "agent": {
     "version": "2",
     "enabled": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gemini-2.5-pro"
-    }
+      "model": "gpt-4.1"
+    },
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-7-sonnet"
+    },
+    "default_profile": "ask"
   },
   "show_call_status_icon": false,
   "tab_bar": {
