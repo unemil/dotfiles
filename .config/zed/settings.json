@@ -12,6 +12,11 @@
   "buffer_font_features": {
     "calt": false
   },
+  "buffer_font_size": 14,
+  "buffer_font_family": "Menlo",
+  "ui_font_size": 15,
+  "ui_font_family": "Menlo",
+  "agent_font_size": 15,
   "restore_on_startup": "none",
   "cursor_blink": false,
   "current_line_highlight": "none",
