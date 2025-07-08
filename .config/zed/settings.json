@@ -1,5 +1,5 @@
 {
-  "buffer_font_size": null,
+  "buffer_line_height": "standard",
   "edit_predictions": {
     "mode": "subtle",
     "enabled_in_text_threads": true
@@ -40,6 +40,7 @@
   },
   "seed_search_query_from_cursor": "selection",
   "project_panel": {
+    "entry_spacing": "standard",
     "file_icons": false,
     "folder_icons": false,
     "indent_guides": {
