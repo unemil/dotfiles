@@ -111,5 +111,6 @@
   "task": {
     "show_status_indicator": false
   },
-  "inline_code_actions": false
+  "inline_code_actions": false,
+  "soft_wrap": "editor_width"
 }
