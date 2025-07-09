@@ -1,10 +1,6 @@
 {
-  "buffer_line_height": "standard",
-  "edit_predictions": {
-    "mode": "subtle",
-    "enabled_in_text_threads": true
-  },
   "theme": "Kanso Ink (No italics)",
+  "buffer_line_height": "standard",
   "features": {
     "edit_prediction_provider": "none"
   },
@@ -26,7 +22,10 @@
     "show_user_picture": false
   },
   "scrollbar": {
-    "show": "system"
+    "show": "system",
+    "axes": {
+      "horizontal": false
+    }
   },
   "gutter": {
     "line_numbers": false,
@@ -112,5 +111,5 @@
     "show_status_indicator": false
   },
   "inline_code_actions": false,
-  "soft_wrap": "editor_width"
+  "vim_mode": true
 }
