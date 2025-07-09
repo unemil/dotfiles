@@ -87,7 +87,7 @@
   },
   "terminal": {
     "toolbar": {
-      "title": false
+      "breadcrumbs": false
     },
     "blinking": "off",
     "line_height": "standard"
