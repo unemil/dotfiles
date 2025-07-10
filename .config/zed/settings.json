@@ -63,7 +63,6 @@
     "button": false
   },
   "agent": {
-    "version": "2",
     "enabled": false
   },
   "show_call_status_icon": false,
@@ -106,9 +105,6 @@
         "usePlaceholders": false
       }
     }
-  },
-  "task": {
-    "show_status_indicator": false
   },
   "inline_code_actions": false,
   "vim_mode": true
