@@ -4,7 +4,13 @@
     "bindings": {
       "alt-space": "editor::ShowCompletions",
       "alt-b": "editor::ToggleGitBlameInline",
-      "alt-shift-b": "editor::ToggleGitBlame"
+      "alt-shift-b": "git::Blame"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-shift-space": "workspace::ToggleVimMode"
     }
   }
 ]
