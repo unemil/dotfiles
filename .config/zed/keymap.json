@@ -10,7 +10,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      "alt-shift-space": "workspace::ToggleVimMode"
+      "alt-shift-space": "workspace::ToggleVimMode",
+      "cmd-alt-b": "git::Branch"
     }
   }
 ]
