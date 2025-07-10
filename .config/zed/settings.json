@@ -28,7 +28,6 @@
     }
   },
   "gutter": {
-    "line_numbers": false,
     "folds": false
   },
   "indent_guides": {
