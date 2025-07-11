@@ -106,5 +106,6 @@
     }
   },
   "inline_code_actions": false,
-  "vim_mode": true
+  "vim_mode": true,
+  "when_closing_with_no_tabs": "keep_window_open"
 }
