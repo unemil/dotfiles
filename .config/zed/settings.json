@@ -62,7 +62,11 @@
     "button": false
   },
   "agent": {
-    "enabled": false
+    "enabled": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
+    }
   },
   "show_call_status_icon": false,
   "tab_bar": {
@@ -107,5 +111,6 @@
   },
   "inline_code_actions": false,
   "vim_mode": true,
-  "when_closing_with_no_tabs": "keep_window_open"
+  "when_closing_with_no_tabs": "keep_window_open",
+  "proxy": "http://username:password@ip:port"
 }
